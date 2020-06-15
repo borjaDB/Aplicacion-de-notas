@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/notedb', {
+
+mongoose.connect(process.env.MONGODB_URI ||'mongodb://localhost/notes-db', {
 	useCreateIndex: true,
 	useNewUrlParser: true,
 	useFindAndModify: false
